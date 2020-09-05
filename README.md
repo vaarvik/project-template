@@ -1,4 +1,4 @@
-# ${1:Project Name}
+# Project Template
 A simple template for a project. The benefit of using this as a template for a project is that the code is watched and the page is updated automatically as we go. In addition the files JS and CSS gets minified, which makes our page act faster. Gulp also adds necessary prefixes to the CSS and the style itself has been optimized which makes the site look stunning from the very beginning.
 ## Features
 * **Gulp**. Keep the project running smooth with Gulp.
