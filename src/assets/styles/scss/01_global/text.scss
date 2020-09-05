@@ -1,0 +1,38 @@
+/**
+ *
+ * ████████╗███████╗██╗  ██╗████████╗
+ * ╚══██╔══╝██╔════╝╚██╗██╔╝╚══██╔══╝
+ *    ██║   █████╗   ╚███╔╝    ██║
+ *    ██║   ██╔══╝   ██╔██╗    ██║
+ *    ██║   ███████╗██╔╝ ██╗   ██║
+ *    ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝
+ *
+ *
+ * A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes.
+ * It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
+*/
+
+//base font size
+$bfs: 16px;
+//base font difference
+$bfd: 6px;
+//base font dynamic affect
+$bfda: .2vw;
+
+$base-font-size: calc(#{ $bfs } + #{ $bfda } );
+
+$vb-font-size: 2.5rem;
+$b-font-size: 2rem;
+$mb-font-size: 1.5rem;
+$m-font-size: $base-font-size;
+$ms-font-size: 0.832rem;
+$s-font-size: 0.666rem;
+$vs-font-size: 0.5rem;
+
+$primary-font: Arial, Helvetica, sans-serif;
+$secondary-font: Georgia, serif;
+
+//Set base font size for the entire site
+html {
+	font-size: $base-font-size;
+}

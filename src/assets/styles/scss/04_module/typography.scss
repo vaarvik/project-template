@@ -1,0 +1,43 @@
+/**
+ *
+ * ████████╗██╗   ██╗██████╗  ██████╗  ██████╗ ██████╗  █████╗ ██████╗ ██╗  ██╗██╗   ██╗
+ * ╚══██╔══╝╚██╗ ██╔╝██╔══██╗██╔═══██╗██╔════╝ ██╔══██╗██╔══██╗██╔══██╗██║  ██║╚██╗ ██╔╝
+ *    ██║    ╚████╔╝ ██████╔╝██║   ██║██║  ███╗██████╔╝███████║██████╔╝███████║ ╚████╔╝
+ *    ██║     ╚██╔╝  ██╔═══╝ ██║   ██║██║   ██║██╔══██╗██╔══██║██╔═══╝ ██╔══██║  ╚██╔╝
+ *    ██║      ██║   ██║     ╚██████╔╝╚██████╔╝██║  ██║██║  ██║██║     ██║  ██║   ██║
+ *    ╚═╝      ╚═╝   ╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝   ╚═╝
+ *
+ *
+ * This sheet contains:
+ * * Modules that related to text primarily
+ *
+ * This sheet is a part of the Module folder and follow the Module rules:
+ * A Module is a more discrete component of the page. Modules sit inside Layout components or other Module components.
+ * It is your navigation bars and your carousels and your dialogs and your widgets and so on. Each Module should be
+ * designed to exist as a standalone component.
+ */
+
+/**
+ * =========================
+ *    || Containers
+ * =========================
+ */
+
+.quote {
+	font-size: $mb-font-size;
+	color: $white;
+	margin: 0;
+	padding: $vb-spacing;
+	background-color: $primary-color;
+	&:before {
+		content: "\"";
+		font-size: calc( #{$b-font-size} * 5 );
+		float: right;
+		vertical-align: text-top;
+		position: relative;
+		margin-top: calc( #{$b-font-size} * -1 );
+	}
+	cite {
+		font-size: $m-font-size;
+	}
+}

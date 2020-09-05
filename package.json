@@ -1,0 +1,22 @@
+{
+  "name": "Project Template",
+  "version": "1.0.0",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-terser": "^1.4.0",
+    "node-sass": "^4.14.1"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "A simple template for a project. The benefit of using this as a template for a project is that the code is watched and the page is updated automatically as we go. In addition the files JS and CSS gets minified, which makes our page act faster. Gulp also adds necessary prefixes to the CSS and the style itself has been optimized which makes the site look stunning from the very beginning."
+}

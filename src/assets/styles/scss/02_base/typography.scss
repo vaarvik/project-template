@@ -1,0 +1,135 @@
+/**
+ *
+ * ████████╗██╗   ██╗██████╗  ██████╗  ██████╗ ██████╗  █████╗ ██████╗ ██╗  ██╗██╗   ██╗
+ * ╚══██╔══╝╚██╗ ██╔╝██╔══██╗██╔═══██╗██╔════╝ ██╔══██╗██╔══██╗██╔══██╗██║  ██║╚██╗ ██╔╝
+ *    ██║    ╚████╔╝ ██████╔╝██║   ██║██║  ███╗██████╔╝███████║██████╔╝███████║ ╚████╔╝
+ *    ██║     ╚██╔╝  ██╔═══╝ ██║   ██║██║   ██║██╔══██╗██╔══██║██╔═══╝ ██╔══██║  ╚██╔╝
+ *    ██║      ██║   ██║     ╚██████╔╝╚██████╔╝██║  ██║██║  ██║██║     ██║  ██║   ██║
+ *    ╚═╝      ╚═╝   ╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝   ╚═╝
+ *
+ *
+ * This sheet contains:
+ * * Typography changes to tags
+ * * Typography tags
+ *
+ * This sheet is a part of the Base folder and follow the Base rules:
+ * A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes.
+ * It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
+*/
+
+/**
+ * =========================
+ *    || Container tags
+ * =========================
+ */
+
+ body {
+	font-family: $primary-font;
+	font-size: $base-font-size;
+	color: $black;
+}
+
+/**
+ * =========================
+ *    || Typography tags
+ * =========================
+ */
+
+h1, h2, h3, h4, h5, h6, p, a, blockquote, cite, pre, label, figcaption  {
+	margin: $s-spacing 0;
+	font-weight: inherit;
+	word-break: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $primary-color;
+}
+
+h1 {
+	font-size: $vb-font-size;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: $b-font-size;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: $b-font-size;
+}
+
+h4 {
+	font-size: $mb-font-size;
+	font-weight: bold;
+}
+
+h5 {
+	font-size: $mb-font-size;
+}
+
+h6 {
+	font-size: $m-font-size;
+	font-weight: bold;
+}
+
+p {
+
+}
+
+a {
+	color: $secondary-color;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+small, sub, sup {
+	font-size: $s-font-size;
+}
+
+sup {
+	vertical-align: top;
+}
+
+mark {
+	background-color: $secondary-color;
+    color: $primary-color;
+}
+
+/**
+ * =========================
+ *    || Figures tags
+ * =========================
+ */
+
+figcaption {
+	font-size: $ms-font-size;
+}
+
+/**
+ * =========================
+ *    || Listings tags
+ * =========================
+ */
+
+dl, ol, ul, dt, dd, li, tr, th, caption {
+	font-family: inherit;
+}
+
+/**
+ * =========================
+ *    || Form tags
+ * =========================
+ */
+
+input, option, select, textarea, button  {
+	font-family: inherit;
+	font-size: $ms-font-size;
+}
+
+legend {
+	font-family: inherit;
+	font-weight: inherit;
+}
