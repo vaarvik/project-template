@@ -1,5 +1,3 @@
-<snippet>
-  <content><![CDATA[
 # ${1:Project Name}
 A simple template for a project. The benefit of using this as a template for a project is that the code is watched and the page is updated automatically as we go. In addition the files JS and CSS gets minified, which makes our page act faster. Gulp also adds necessary prefixes to the CSS and the style itself has been optimized which makes the site look stunning from the very beginning.
 ## Features
@@ -49,6 +47,3 @@ Customs are the regular JavaScripts that count for the entire site as for exampl
 [Johann Vårvik](https://github.com/vaarvik)
 ## License
 ISC
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
