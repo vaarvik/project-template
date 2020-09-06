@@ -14,7 +14,8 @@
  * ----------
  * * .site-header wraps the header for the site
  * * .site-branding wraps the branding for the site (.site-title and .site-description for example)
- * * .site-title wraps the title/logo for the site
+ * * .site-title wraps the title for the site
+ * * .site-title wraps the logo for the site
  * * .site-description wraps the description/slogan for the site
  * * .site-content wraps the content for the site
  *
@@ -33,6 +34,10 @@
 }
 
 .site-title {
+
+}
+
+.site-logo {
 
 }
 
