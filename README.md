@@ -3,6 +3,8 @@ A simple template for a project. The benefit of using this as a template for a p
 ## Features
 * **Gulp**. Keep the project running smooth with Gulp.
 * **SASS**. Clean efficient style using SASS and the SMACSS method.
+## Requirements
+* **Node.js**
 ## Installation
 Install developer dependencies
 ```bash
