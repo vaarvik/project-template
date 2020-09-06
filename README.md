@@ -8,12 +8,12 @@ Install developer dependencies
 ```bash
 $ npm install
 ```
-###Standard project
+### Standard project
 Open the terminal, cd into the current folder and run "npm start".
 ```bash
 $ npm start
 ```
-###PHP project
+### PHP project
 1. Start a server through your favorite web development environment.
 2. Get the local URL for the specific site that is running on the server.
 3. Go in gulp-config.js and set the URL as the proxy.
