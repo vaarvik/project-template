@@ -69,7 +69,6 @@ Finally, Theme rules are similar to state rules in that they describe how module
 @import '02_base/form.scss';
 @import '02_base/figures.scss';
 @import '02_base/typography.scss';
-@import '02_base/sites.scss';
 
 /**
  * =========================
@@ -77,7 +76,8 @@ Finally, Theme rules are similar to state rules in that they describe how module
  * =========================
  */
 
-@import '03_layout/layout.scss';
+@import '03_layout/sites.scss';
+@import '03_layout/components.scss';
 
 /**
  * =========================

@@ -9,7 +9,7 @@
  *
  *
  * This sheet contains:
- * * Big modules that defines different page types
+ * * Layout containers that defines different page types
  *
  * Types:
  * ----------
@@ -25,10 +25,10 @@
  * * A home shows a home page
  * * An error404 shows an 404 error page
  *
- * This sheet is a part of the Module folder and follow the Module rules:
- * A Module is a more discrete component of the page. Modules sit inside Layout components or other Module components.
- * It is your navigation bars and your carousels and your dialogs and your widgets and so on. Each Module should be
- * designed to exist as a standalone component.
+ * This sheet is a part of the Layout folder and follow the Layout rules:
+ * The major components are referred to as Layout styles. The minor (Module) components—such as a callout, or login form,
+ * or a navigation item—sit within the scope of major components such as a header or footer.
+ * Generally, a Layout style only has a single selector: a single ID or class name.
  */
 
 .page {
