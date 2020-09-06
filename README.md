@@ -46,4 +46,4 @@ Customs are the regular JavaScripts that count for the entire site as for exampl
 ## Credits
 [Johann Vårvik](https://github.com/vaarvik)
 ## License
-ISC
+MIT
