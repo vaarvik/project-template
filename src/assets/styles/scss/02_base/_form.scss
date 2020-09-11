@@ -58,7 +58,7 @@ button, input[type="button"], input[type="submit"], input[type="reset"] {
 	background-color: $primary-color;
 	color: $white;
 	cursor: pointer;
-	&:hover:not([disabled]) {
+	&:hover {
 		background-color: $secondary-color;
 	}
 }
