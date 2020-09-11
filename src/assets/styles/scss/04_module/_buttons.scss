@@ -1,0 +1,43 @@
+/**
+ *
+ * ██████╗ ██╗   ██╗████████╗████████╗ ██████╗ ███╗   ██╗███████╗
+ * ██╔══██╗██║   ██║╚══██╔══╝╚══██╔══╝██╔═══██╗████╗  ██║██╔════╝
+ * ██████╔╝██║   ██║   ██║      ██║   ██║   ██║██╔██╗ ██║███████╗
+ * ██╔══██╗██║   ██║   ██║      ██║   ██║   ██║██║╚██╗██║╚════██║
+ * ██████╔╝╚██████╔╝   ██║      ██║   ╚██████╔╝██║ ╚████║███████║
+ * ╚═════╝  ╚═════╝    ╚═╝      ╚═╝    ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+ *
+ *
+ * This sheet contains:
+ * * Modules for buttons
+ *
+ * This sheet is a part of the Module folder and follow the Module rules:
+ * A Module is a more discrete component of the page. Modules sit inside Layout components or other Module components.
+ * It is your navigation bars and your carousels and your dialogs and your widgets and so on. Each Module should be
+ * designed to exist as a standalone component.
+ */
+
+.btn {
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+	border-radius: 5em;
+	text-transform: uppercase;
+	border: 3px solid $primary-color;
+	transition: .4s ease;
+	&.btn-primary {
+		&:hover {
+			background-color: $white;
+			color: $primary-color;
+			border: 3px solid $primary-color;
+		}
+	}
+	&.btn-secondary {
+		background-color: $white;
+		color: $primary-color;
+		border: 3px solid $primary-color;
+		&:hover {
+			background-color: $primary-color;
+			color: $white;
+			border: 3px solid transparent;
+		}
+	}
+}

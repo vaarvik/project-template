@@ -19,7 +19,34 @@
 
 /**
  * =========================
- *    || Containers
+ *    || Lists
+ * =========================
+ */
+
+ .ul, .ol {
+	padding-inline-start: $b-spacing;
+	.li {
+		&li {
+			list-style: initial;
+		}
+		&.li-disc {
+			list-style: disc;
+		}
+		&.li-square {
+			list-style: square;
+		}
+		&.li-roman {
+			list-style: upper-roman;
+		}
+		&.li-decimal {
+			list-style: decimal;
+		}
+	}
+}
+
+/**
+ * =========================
+ *    || Blocks
  * =========================
  */
 
@@ -39,5 +66,16 @@
 	}
 	cite {
 		font-size: $m-font-size;
+	}
+}
+
+.info-box {
+	background-color: $primary-color;
+	padding: $s-spacing;
+	color: $white;
+	margin: $s-spacing;
+	max-width: 250px;
+	h1, h2, h3, h4, h5, h6 {
+		color: inherit;
 	}
 }

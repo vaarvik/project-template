@@ -1,0 +1,49 @@
+/**
+ *
+ * ███████╗██╗███████╗██╗     ██████╗ ███████╗
+ * ██╔════╝██║██╔════╝██║     ██╔══██╗██╔════╝
+ * █████╗  ██║█████╗  ██║     ██║  ██║███████╗
+ * ██╔══╝  ██║██╔══╝  ██║     ██║  ██║╚════██║
+ * ██║     ██║███████╗███████╗██████╔╝███████║
+ * ╚═╝     ╚═╝╚══════╝╚══════╝╚═════╝ ╚══════╝
+ *
+ *
+ * This sheet contains:
+ * * Modules for inputs, textareas and labels
+ *
+ * This sheet is a part of the Module folder and follow the Module rules:
+ * A Module is a more discrete component of the page. Modules sit inside Layout components or other Module components.
+ * It is your navigation bars and your carousels and your dialogs and your widgets and so on. Each Module should be
+ * designed to exist as a standalone component.
+ */
+
+/**
+ * =========================
+ *    || Fields
+ * =========================
+ */
+
+.field {
+	box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+	border-radius: 5px;
+	background-color: $light-grey;
+	border: 0;
+	display: block;
+	&.input{
+		padding: $ms-spacing;
+	}
+	.option {
+		padding: $s-spacing;
+		border-bottom: 2px solid $grey;
+		&:hover {
+			background-color: $white;
+			cursor: pointer;
+		}
+	}
+}
+
+/**
+ * =========================
+ *    || Buttons
+ * =========================
+ */

@@ -10,18 +10,21 @@
  *
  *
  * This sheet contains:
- * * Modules that usually are used in a any entry
+ * * Layouts that usually are used in an entry
  *
- * This sheet is a part of the Module folder and follow the Module rules:
- * A Module is a more discrete component of the page. Modules sit inside Layout components or other Module components.
- * It is your navigation bars and your carousels and your dialogs and your widgets and so on. Each Module should be
- * designed to exist as a standalone component.
+ * This sheet is a part of the Layout folder and follow the Layout rules:
+ * The major components are referred to as Layout styles. The minor (Module) components—such as a callout, or login form,
+ * or a navigation item—sit within the scope of major components such as a header or footer.
+ * Generally, a Layout style only has a single selector: a single ID or class name.
  */
 
 /**
  * =========================
  *    || Main modules
  * =========================
+ *
+ * Almost a Module because: There might be more entries for a single page.
+ * -------------------------
  */
 
 .entry-content {
@@ -42,41 +45,48 @@
 
 /**
  * =========================
- *    || Repeaters
+ *    || Headers
  * =========================
+ * Container for sub headers in entries
+ * -------------------------
  */
 
 .header {
 
 }
 
+/**
+ * =========================
+ *    || Articles
+ * =========================
+ * Container for articles in entries
+ * -------------------------
+ */
+
 .article {
-
-}
-
-.section {
-
-}
-
-.footer {
 
 }
 
 /**
  * =========================
- *    || Special modules
+ *    || Sections
  * =========================
+ * Container for sections in entries
+ * -------------------------
  */
 
-.cover, .note {
-	background-color: $primary-color;
-	padding: $s-spacing;
-	color: $white;
-	&.note {
-		margin: $s-spacing;
-		max-width: 250px;
-	}
-	h1, h2, h3, h4, h5, h6 {
-		color: inherit;
-	}
+.section {
+
+}
+
+/**
+ * =========================
+ *    || Footers
+ * =========================
+ * Container for footers in entries
+ * -------------------------
+ */
+
+.footer {
+
 }
