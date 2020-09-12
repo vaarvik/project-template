@@ -25,9 +25,10 @@
 table {
 	border-collapse: collapse; //Removes spacing in table
 	border-style: hidden; //Remove all the outside borders of the existing table
-	th {
-		text-align: inherit;
-	}
+}
+
+th {
+	text-align: inherit;
 }
 
 /**

@@ -1,0 +1,318 @@
+/**
+ *
+ * ███████╗██████╗  █████╗  ██████╗██╗███╗   ██╗ ██████╗
+ * ██╔════╝██╔══██╗██╔══██╗██╔════╝██║████╗  ██║██╔════╝
+ * ███████╗██████╔╝███████║██║     ██║██╔██╗ ██║██║  ███╗
+ * ╚════██║██╔═══╝ ██╔══██║██║     ██║██║╚██╗██║██║   ██║
+ * ███████║██║     ██║  ██║╚██████╗██║██║ ╚████║╚██████╔╝
+ * ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝╚═╝╚═╝  ╚═══╝ ╚═════╝
+ *
+ *
+ * This sheet contains:
+ * * Utilities for spacing
+ *
+ * This sheet is a part of the Utilities folder which is not really a part of SMACSS:
+ * General classes/helpers that can be used to extend other classes. Often general styles that can be applied wherever.
+ */
+
+.no-spacing {
+	margin: 0;
+	padding: 0;
+}
+
+/**
+ * =========================
+ *    || Margins (mgn)
+ * =========================
+ */
+
+.no-mgn {
+	margin: 0;
+}
+
+.mgn-t {
+	margin: $t-spacing;
+}
+
+.mgn-vs {
+	margin: $vs-spacing;
+}
+
+.mgn-s {
+	margin: $s-spacing;
+}
+
+.mgn-ms {
+	margin: $ms-spacing;
+}
+
+.mgn-m {
+	margin: $m-spacing;
+}
+
+.mgn-mb {
+	margin: $mb-spacing;
+}
+
+.mgn-b {
+	margin: $b-spacing;
+}
+
+.mgn-vb {
+	margin: $vb-spacing;
+}
+
+.mgn-h {
+	margin: $h-spacing;
+}
+
+/**
+ *    || Margin X
+ * -------------------------
+ */
+
+ .mgn-x-t {
+	margin-left: $t-spacing;
+	margin-right: $t-spacing;
+}
+
+.mgn-x-vs {
+	margin-left: $vs-spacing;
+	margin-right: $vs-spacing;
+}
+
+.mgn-x-s {
+	margin-left: $s-spacing;
+	margin-right: $s-spacing;
+}
+
+.mgn-x-ms {
+	margin-left: $ms-spacing;
+	margin-right: $ms-spacing;
+}
+
+.mgn-x-m {
+	margin-left: $m-spacing;
+	margin-right: $m-spacing;
+}
+
+.mgn-x-mb {
+	margin-left: $mb-spacing;
+	margin-right: $mb-spacing;
+}
+
+.mgn-x-b {
+	margin-left: $b-spacing;
+	margin-right: $b-spacing;
+}
+
+.mgn-x-vb {
+	margin-left: $vb-spacing;
+	margin-right: $vb-spacing;
+}
+
+.mgn-x-h {
+	margin-left: $h-spacing;
+	margin-right: $h-spacing;
+}
+
+/**
+ *    || Margin Y
+ * -------------------------
+ */
+
+.mgn-y-t {
+	margin-top: $t-spacing;
+	margin-bottom: $t-spacing;
+}
+
+.mgn-y-vs {
+	margin-top: $vs-spacing;
+	margin-bottom: $vs-spacing;
+}
+
+.mgn-y-s {
+	margin-top: $s-spacing;
+	margin-bottom: $s-spacing;
+}
+
+.mgn-y-ms {
+	margin-top: $ms-spacing;
+	margin-bottom: $ms-spacing;
+}
+
+.mgn-y-m {
+	margin-top: $m-spacing;
+	margin-bottom: $m-spacing;
+}
+
+.mgn-y-mb {
+	margin-top: $mb-spacing;
+	margin-bottom: $mb-spacing;
+}
+
+.mgn-y-b {
+	margin-top: $b-spacing;
+	margin-bottom: $b-spacing;
+}
+
+.mgn-y-vb {
+	margin-top: $vb-spacing;
+	margin-bottom: $vb-spacing;
+}
+
+.mgn-y-h {
+	margin-top: $h-spacing;
+	margin-bottom: $h-spacing;
+}
+
+/**
+ * =========================
+ *    || Paddings
+ * =========================
+ */
+
+.no-pad {
+	padding: 0;
+}
+
+/**
+ *    || Padding X and Y
+ * -------------------------
+ */
+
+.pad-t {
+	padding: $t-spacing;
+}
+
+.pad-vs {
+	padding: $vs-spacing;
+}
+
+.pad-s {
+	padding: $s-spacing;
+}
+
+.pad-ms {
+	padding: $ms-spacing;
+}
+
+.pad-m {
+	padding: $m-spacing;
+}
+
+.pad-mb {
+	padding: $mb-spacing;
+}
+
+.pad-b {
+	padding: $b-spacing;
+}
+
+.pad-vb {
+	padding: $vb-spacing;
+}
+
+.pad-h {
+	padding: $h-spacing;
+}
+
+/**
+ *    || Padding X
+ * -------------------------
+ */
+
+.pad-x-t {
+	padding-left: $t-spacing;
+	padding-right: $t-spacing;
+}
+
+.pad-x-vs {
+	padding-left: $vs-spacing;
+	padding-right: $vs-spacing;
+}
+
+.pad-x-s {
+	padding-left: $s-spacing;
+	padding-right: $s-spacing;
+}
+
+.pad-x-ms {
+	padding-left: $ms-spacing;
+	padding-right: $ms-spacing;
+}
+
+.pad-x-m {
+	padding-left: $m-spacing;
+	padding-right: $m-spacing;
+}
+
+.pad-x-mb {
+	padding-left: $mb-spacing;
+	padding-right: $mb-spacing;
+}
+
+.pad-x-b {
+	padding-left: $b-spacing;
+	padding-right: $b-spacing;
+}
+
+.pad-x-vb {
+	padding-left: $vb-spacing;
+	padding-right: $vb-spacing;
+}
+
+.pad-x-h {
+	padding-left: $h-spacing;
+	padding-right: $h-spacing;
+}
+
+/**
+ *    || Padding Y
+ * -------------------------
+ */
+
+.pad-y-t {
+	padding-top: $t-spacing;
+	padding-bottom: $t-spacing;
+}
+
+.pad-y-vs {
+	padding-top: $vs-spacing;
+	padding-bottom: $vs-spacing;
+}
+
+.pad-y-s {
+	padding-top: $s-spacing;
+	padding-bottom: $s-spacing;
+}
+
+.pad-y-ms {
+	padding-top: $ms-spacing;
+	padding-bottom: $ms-spacing;
+}
+
+.pad-y-m {
+	padding-top: $m-spacing;
+	padding-bottom: $m-spacing;
+}
+
+.pad-y-mb {
+	padding-top: $mb-spacing;
+	padding-bottom: $mb-spacing;
+}
+
+.pad-y-b {
+	padding-top: $b-spacing;
+	padding-bottom: $b-spacing;
+}
+
+.pad-y-vb {
+	padding-top: $vb-spacing;
+	padding-bottom: $vb-spacing;
+}
+
+.pad-y-h {
+	padding-top: $h-spacing;
+	padding-bottom: $h-spacing;
+}

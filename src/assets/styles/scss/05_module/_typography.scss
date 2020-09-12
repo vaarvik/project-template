@@ -23,22 +23,28 @@
  * =========================
  */
 
- .ul, .ol {
+ .default-ul, .default-ol {
 	padding-inline-start: $b-spacing;
-	.li {
-		&li {
-			list-style: initial;
-		}
-		&.li-disc {
+
+	//Elements
+	&__li {
+		list-style: inherit;
+
+		//Element Modifiers
+		&--disc{
+			@extend .default-ul__li;
 			list-style: disc;
 		}
-		&.li-square {
+		&--square{
+			@extend .default-ul__li;
 			list-style: square;
 		}
-		&.li-roman {
+		&--roman{
+			@extend .default-ul__li;
 			list-style: upper-roman;
 		}
-		&.li-decimal {
+		&--decimal{
+			@extend .default-ol__li;
 			list-style: decimal;
 		}
 	}
@@ -46,7 +52,7 @@
 
 /**
  * =========================
- *    || Blocks
+ *    || Covers
  * =========================
  */
 
@@ -64,18 +70,17 @@
 		position: relative;
 		margin-top: calc( #{$b-font-size} * -1 );
 	}
-	cite {
+
+	//Elements
+	&__cite {
 		font-size: $m-font-size;
 	}
 }
 
-.info-box {
+.infobox {
 	background-color: $primary-color;
 	padding: $s-spacing;
 	color: $white;
 	margin: $s-spacing;
 	max-width: 250px;
-	h1, h2, h3, h4, h5, h6 {
-		color: inherit;
-	}
 }

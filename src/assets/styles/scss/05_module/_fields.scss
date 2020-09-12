@@ -17,22 +17,21 @@
  * designed to exist as a standalone component.
  */
 
-/**
- * =========================
- *    || Fields
- * =========================
- */
-
 .field {
 	box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
 	border-radius: 5px;
 	background-color: $light-grey;
 	border: 0;
 	display: block;
-	&.input{
+
+	//Modifiers
+	&--input{
+		@extend .field;
 		padding: $ms-spacing;
 	}
-	.option {
+
+	//Elements
+	&__option {
 		padding: $s-spacing;
 		border-bottom: 2px solid $grey;
 		&:hover {
@@ -41,9 +40,3 @@
 		}
 	}
 }
-
-/**
- * =========================
- *    || Buttons
- * =========================
- */

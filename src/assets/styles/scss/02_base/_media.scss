@@ -20,15 +20,11 @@ canvas {
 	border: 3px solid $black;
 }
 
-figure {
-	margin: $s-spacing 0;
-	display: inline-block;
-	img {
-		margin: 0;
-		display: block;
-	}
+img {
+	margin: 0;
+	display: block;
 }
 
-audio, video, canvas, iframe, meter, progress, figcaption {
+audio, video, canvas, iframe, meter, progress, figure, figcaption {
 	margin: $s-spacing 0;
 }

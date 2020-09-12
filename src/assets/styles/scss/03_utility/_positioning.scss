@@ -1,0 +1,52 @@
+/**
+ *
+ * ██████╗  ██████╗ ███████╗██╗████████╗██╗ ██████╗ ███╗   ██╗██╗███╗   ██╗ ██████╗
+ * ██╔══██╗██╔═══██╗██╔════╝██║╚══██╔══╝██║██╔═══██╗████╗  ██║██║████╗  ██║██╔════╝
+ * ██████╔╝██║   ██║███████╗██║   ██║   ██║██║   ██║██╔██╗ ██║██║██╔██╗ ██║██║  ███╗
+ * ██╔═══╝ ██║   ██║╚════██║██║   ██║   ██║██║   ██║██║╚██╗██║██║██║╚██╗██║██║   ██║
+ * ██║     ╚██████╔╝███████║██║   ██║   ██║╚██████╔╝██║ ╚████║██║██║ ╚████║╚██████╔╝
+ * ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝  ╚═══╝ ╚═════╝
+ *
+ *
+ * This sheet contains:
+ * * Utilities for positioning
+ *
+ * This sheet is a part of the Utilities folder which is not really a part of SMACSS:
+ * General classes/helpers that can be used to extend other classes. Often general styles that can be applied wherever.
+ */
+
+/**
+ * =========================
+ *    || Text align
+ * =========================
+ */
+
+.ta-center {
+	text-align: center;
+}
+
+.ta-left {
+	text-align: left;
+}
+
+.ta-right {
+	text-align: right;
+}
+
+/**
+ * =========================
+ *    || Position
+ * =========================
+ */
+
+.absolute {
+	position: absolute;
+}
+
+.relative {
+	position: relative;
+}
+
+.fixed {
+	position: fixed;
+}

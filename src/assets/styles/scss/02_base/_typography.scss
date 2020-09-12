@@ -41,8 +41,8 @@ h1, h2, h3, h4, h5, h6, p, a, blockquote, cite, pre, label, figcaption  {
 	word-break: break-word;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	color: $primary-color;
+h1, h2, h4 {
+	font-family: $secondary-font;
 }
 
 h1 {

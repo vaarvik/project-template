@@ -17,6 +17,7 @@ $max-width: 960px;
 $bsd: 6px;
 $base-spacing: 24px;
 
+$h-spacing: #{$base-spacing + ( $bsd * 4 )};
 $vb-spacing: #{$base-spacing + ( $bsd * 3 )};
 $b-spacing: #{$base-spacing + ( $bsd * 2 )};
 $mb-spacing: #{$base-spacing + ( $bsd * 1 )};
@@ -24,3 +25,4 @@ $m-spacing: $base-spacing;
 $ms-spacing: #{$base-spacing - ( $bsd * 1 )};
 $s-spacing: #{$base-spacing - ( $bsd * 2 )};
 $vs-spacing: #{$base-spacing - ( $bsd * 3 )};
+$t-spacing: #{$base-spacing - ( $bsd * 3.5 )};

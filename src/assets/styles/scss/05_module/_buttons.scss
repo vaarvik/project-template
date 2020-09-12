@@ -23,14 +23,18 @@
 	text-transform: uppercase;
 	border: 3px solid $primary-color;
 	transition: .4s ease;
-	&.btn-primary {
+
+	//Modifiers
+	&--primary {
+		@extend .btn;
 		&:hover {
 			background-color: $white;
 			color: $primary-color;
 			border: 3px solid $primary-color;
 		}
 	}
-	&.btn-secondary {
+	&--secondary {
+		@extend .btn;
 		background-color: $white;
 		color: $primary-color;
 		border: 3px solid $primary-color;
