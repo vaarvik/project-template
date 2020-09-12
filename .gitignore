@@ -1,5 +1,6 @@
 #these files will not be uploaded to GitHub
 node_modules
+images
 build
 npm-debug.log
 .env
