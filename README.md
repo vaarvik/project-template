@@ -47,51 +47,7 @@ Vendors are files that other JavaScript files likely depent on since these are a
 Customs are the regular JavaScripts that count for the entire site as for example scripts for menu change etc.
 ### Naming
 The naming convention is based on BEM. Here's an example when creating the Module "block".
-<style>
-	.block, .block--transparent {
-		display: inline-block;
-		width: 200px;
-		min-height: 200px;
-		margin: 20px;
-		background-color: lightgrey;
-		color: black;
-		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-	}
-	.block--transparent {
-		background-color: transparent;
-	}
-	.block__img, .block__img--full {
-		display: block;
-		margin: 0 auto;
-		padding-top: 20px;
-		width: 80%;
-	}
-	.block__img--full {
-		padding-top: 0;
-		width: 100%;
-	}
-	.block__content {
-		padding: 20px;
-	}
-</style>
-<div class="block">
-	<img class="block__img" src="https://picsum.photos/seed/picsum/200/300"/>
-	<div class="block__content">
-		<p>Lots of text</p>
-	</div>
-</div>
-<div class="block--transparent">
-	<img class="block__img" src="https://picsum.photos/seed/picsum/200/300"/>
-	<div class="block__content">
-		<p>Lots of text</p>
-	</div>
-</div>
-<div class="block--transparent">
-	<img class="block__img--full" src="https://picsum.photos/seed/picsum/200/300"/>
-	<div class="block__content">
-		<p>Lots of text</p>
-	</div>
-</div>
+![A screenshot of the block example](src/assets/images/project-template-screen.png?raw=true)
 ```html
 <div class="block">
 	<img class="block__img" src="https://picsum.photos/seed/picsum/200/300"/>
