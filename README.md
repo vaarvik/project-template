@@ -124,6 +124,7 @@ The naming convention is based on BEM. Here's an example when creating the Modul
 ```
 #### Utilities
 Utilities are messy and unnecessary inside a HTML document. If for example the number of colums is for the entire site is set by a utility, then you'd have to go over the entire HTML and change the selector all over the place. However, if efficiency is important you could do this, but then you should make a note that you have a technical debt that should be cleaned up if the projects goes further. Under some circumstances this might make sense if you don't know what the logic class name for a component would be.
+
 In most cases you should use utilities as a extend of a class. This comes in during the styling after you've given your component a logical class name. Doing this will decrease the size of your CSS file and make the style easy to maintain, because you might just have to change the selector more once in the example above. Here's an example using extend:
 ```scss
 .block {
@@ -142,8 +143,10 @@ IDs should not be used for styling, but should be added in HTML for JavaScript p
 * #site-navigation
 * #site-header
 ### JavaScript
-The different scripts is concatenated into two minimized files by default: vendors.min.js and customs.min.js. This happens because Gulp goes throught the folders named "customs" and "vendors" and merge the underlying files into one single file. We do also have the specifics where each file gets minified and not merged.
-The reason for this is that specifics are specific scripts for specific pages. Therefore there would not make any sense to merge the specifics and make longer files than needed for the particular page.
+The different scripts is concatenated into two minimized files by default: vendors.min.js and customs.min.js. This happens because Gulp goes throught the folders named "customs" and "vendors" and merge the underlying files into one single file.
+
+In addition we have the specifics where each file gets minified and not merged. The reason for this is that specifics are specific scripts for specific pages. Therefore there would not make any sense to merge the specifics and make longer files than needed for the particular page.
+
 Vendors are files that other JavaScript files likely depent on since these are a collection of the JavaScript libraries that are used.
 Customs are the regular JavaScripts that count for the entire site as for example scripts for menu change etc.
 ## Credits
