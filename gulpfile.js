@@ -1,8 +1,24 @@
-/*
-  This is an EXAMPLE gulpfile.js
-  You'll want to change it to match your project.
-  Find plugins at https://npmjs.org/browse/keyword/gulpplugin
+/**
+ *
+ *  ██████╗ ██╗   ██╗██╗     ██████╗
+ * ██╔════╝ ██║   ██║██║     ██╔══██╗
+ * ██║  ███╗██║   ██║██║     ██████╔╝
+ * ██║   ██║██║   ██║██║     ██╔═══╝
+ * ╚██████╔╝╚██████╔╝███████╗██║
+ *  ╚═════╝  ╚═════╝ ╚══════╝╚═╝
+ *
+ *
+ * The tasks of this gulp file:
+ * * Watches scripts, styles, PHP and HMTL documents
+ * * Reloads the page on changes
+ * * Compiles SCSS into CSS
+ * * Adds prefixes to CSS
+ * * Minifies scripts and styles
+ * * Relocates scripts and styles
+ * * Concatenate and renames scripts
+ * * Creates a live server
 */
+
 const gulp = require('gulp');
 const terser = require('gulp-terser');
 const rename = require('gulp-rename');

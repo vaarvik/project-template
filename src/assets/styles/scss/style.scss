@@ -11,11 +11,11 @@
  * This sheet contains:
  * * All the SASS files that is inside the scss folder
  *
- * The file/folder structure follows the guidelines of SMACSS.
+ * The file/folder structure follows the basic guidelines of SMACSS. In addition to the default categories there has also been added Global (storing SCSS variables) and Utilities (storing general helper classes).
 
 From http://smacss.com/book/categorizing:
 
-"At the very core of SMACSS is categorization. By categorizing CSS rules, we begin to see patterns and can define better practices around each of these patterns.
+"At the very core of SMACSS is categorization. By categorizing CSS rules, we begin to see patterns and can define better practices around each of these patterns."
 There are five types of categories:
  * Base
  * Layout
@@ -23,10 +23,27 @@ There are five types of categories:
  * State
  * Theme
 
+However with some modifications this is the categories for this project:
+ * Global
+ * Base
+ * Layout
+ * Utility
+ * Module
+ * State
+ * Theme
+
+GLOBAL
+==========
+Global is used to store SCSS variables (font-sizes, spacing, etc.) and overall document styles as the font-size for the HTML tag.
+
 BASE
 ==========
 Base rules are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.
 Layout rules divide the page into sections.
+
+Utility
+==========
+Utilities are general helper classes that can be applied or extended everywhere. It should in most cases rather be used as a extend than in the HTML document itself.
 
 LAYOUTS
 ==========
