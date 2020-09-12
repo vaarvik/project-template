@@ -12,12 +12,15 @@ const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const { config } = require('./gulp-config');
 
+//assets folder path
+const assetsUri = config.assetsUri.replace(/\/\s*$/, "");
+
 //tasks for file handling
 let fileHandling = [ "scripts", "styles" ];
 
 //scripts tasks
 gulp.task( "scripts", function( done ) {
-    gulp.src('src/assets/js/customs/*.js')
+    gulp.src(`${assetsUri}/js/customs/*.js`)
         //make all into one single min-file
         .pipe(concat('customs.js'))
         //minimize scripts
@@ -25,8 +28,8 @@ gulp.task( "scripts", function( done ) {
         //add .min to the file name
         .pipe(rename({ suffix: '.min' }))
         //set the location for where the file should be stored
-		.pipe(gulp.dest('src/assets/js'));
-    gulp.src('src/assets/js/vendors/*.js')
+		.pipe(gulp.dest(`${assetsUri}/js`));
+    gulp.src(`${assetsUri}/js/vendors/*.js`)
         //make all into one single min-file
         .pipe(concat('vendors.js'))
         //minimize scripts
@@ -34,14 +37,14 @@ gulp.task( "scripts", function( done ) {
         //add .min to the file name
         .pipe(rename({ suffix: '.min' }))
         //set the location for where the file should be stored
-		.pipe(gulp.dest('src/assets/js'));
-    gulp.src('src/assets/js/specifics/*.js')
+		.pipe(gulp.dest(`${assetsUri}/js`));
+    gulp.src(`${assetsUri}/js/specifics/*.js`)
         //minimize scripts
 		.pipe(terser())
         //add .min to the file name
         .pipe(rename({ suffix: '.min' }))
         //set the location for where the file should be stored
-        .pipe(gulp.dest('src/assets/js'));
+        .pipe(gulp.dest(`${assetsUri}/js`));
 
     done();
 } );
@@ -50,10 +53,10 @@ gulp.task( "scripts", function( done ) {
 sass.compiler = require('node-sass');
 
 gulp.task('styles', function( done ) {
-    gulp.src('src/assets/styles/scss/style.scss')
+    gulp.src(`${assetsUri}/styles/scss/style.scss`)
         .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer('last 2 versions'))
-        .pipe(gulp.dest('src/assets/styles'));
+        .pipe(gulp.dest(`${assetsUri}/styles`));
 
     done();
 } );
@@ -84,9 +87,9 @@ gulp.task('reload', function( done ) {
 gulp.task( "watch", function( done ) {
 	gulp.watch( [
         //all js files in js assets folder
-        'src/assets/js/*/*.js',
+        `${assetsUri}/js/*/*.js`,
         //all scss files in styles assets folder
-        'src/assets/styles/**/*.scss',
+        `${assetsUri}/styles/**/*.scss`,
         //all html files from root
         './*.html',
         //all php files from root
