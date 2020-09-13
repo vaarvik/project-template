@@ -46,26 +46,26 @@ The naming convention is based on [BEM](http://getbem.com/naming/). Here's an ex
 ![A screenshot of the block example](src/assets/images/project-template-screen.png?raw=true)
 ```html
 <div class="card">
-		<img class="card__img" src="https://picsum.photos/200/300"/>
-		<div class="card__content">
-			<h4 class="card__heading">Heading</h4>
-			<p>Lots of text</p>
-		</div>
+	<img class="card__img" src="https://picsum.photos/200/300"/>
+	<div class="card__content">
+		<h4 class="card__heading">Heading</h4>
+		<p>Lots of text</p>
 	</div>
-	<div class="card card--scary">
-		<img class="card__img" src="https://picsum.photos/200/300"/>
-		<div class="card__content">
-			<h4 class="card__heading">Heading</h4>
-			<p>Lots of text</p>
-		</div>
+</div>
+<div class="card card--scary">
+	<img class="card__img" src="https://picsum.photos/200/300"/>
+	<div class="card__content">
+		<h4 class="card__heading">Heading</h4>
+		<p>Lots of text</p>
 	</div>
-	<div class="card card--scary">
-		<img class="card__img card__img--full" src="https://picsum.photos/200/300"/>
-		<div class="card__content">
-			<h4 class="card__heading">Heading</h4>
-			<p>Lots of text</p>
-		</div>
+</div>
+<div class="card card--scary">
+	<img class="card__img card__img--full" src="https://picsum.photos/200/300"/>
+	<div class="card__content">
+		<h4 class="card__heading">Heading</h4>
+		<p>Lots of text</p>
 	</div>
+</div>
 ```
 #### CSS example:
 ```css

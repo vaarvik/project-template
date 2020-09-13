@@ -8,6 +8,62 @@
 	<script src="src/assets/js/customs.min.js"></script>
 	<link rel="stylesheet" href="src/assets/styles/style.css">
 </head>
-<body>
+<body><style>
+	.card {
+	display: inline-block;
+	width: 200px;
+	min-height: 200px;
+	margin: 20px;
+	background-color: #f8f8f8;
+	color: black;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.card--scary {
+	background-color: #181818;
+	color: white;
+}
+.card__img {
+	display: block;
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 80%;
+}
+.card__img--full {
+	padding-top: 0;
+	width: 100%;
+}
+.card__content {
+	padding: 20px;
+}
+.card__heading {
+	color: seagreen;
+}
+.card--scary .card__heading {
+	color: crimson;
+}
+
+</style>
+
+<div class="card">
+	<img class="card__img" src="https://picsum.photos/200/300"/>
+	<div class="card__content">
+		<h4 class="card__heading">Heading</h4>
+		<p>Lots of text</p>
+	</div>
+</div>
+<div class="card card--scary">
+	<img class="card__img" src="https://picsum.photos/200/300"/>
+	<div class="card__content">
+		<h4 class="card__heading">Heading</h4>
+		<p>Lots of text</p>
+	</div>
+</div>
+<div class="card card--scary">
+	<img class="card__img card__img--full" src="https://picsum.photos/200/300"/>
+	<div class="card__content">
+		<h4 class="card__heading">Heading</h4>
+		<p>Lots of text</p>
+	</div>
+</div>
 </body>
 </html>
