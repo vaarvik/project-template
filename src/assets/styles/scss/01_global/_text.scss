@@ -8,8 +8,11 @@
  *    ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝
  *
  *
- * A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes.
- * It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
+ * This sheet contains:
+ * * Global text/font variables
+ *
+ * This sheet is a part of the Global folder which is not really a part of SMACSS:
+ * Global stores variables that can be used all over the document and create a consistency in the style.
 */
 
 //base font size
