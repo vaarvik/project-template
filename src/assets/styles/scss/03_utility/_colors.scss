@@ -1,0 +1,84 @@
+/**
+ *
+ *  ██████╗ ██████╗ ██╗      ██████╗ ██████╗ ███████╗
+ * ██╔════╝██╔═══██╗██║     ██╔═══██╗██╔══██╗██╔════╝
+ * ██║     ██║   ██║██║     ██║   ██║██████╔╝███████╗
+ * ██║     ██║   ██║██║     ██║   ██║██╔══██╗╚════██║
+ * ╚██████╗╚██████╔╝███████╗╚██████╔╝██║  ██║███████║
+ *  ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
+ *
+ *
+ * This sheet contains:
+ * * Utilities for colors
+ *
+ * This sheet is a part of the Utilities folder which is not really a part of SMACSS:
+ * General classes/helpers that can be used to extend other classes. Often general styles that can be applied wherever.
+ */
+
+/**
+ * =========================
+ *    || Text colors
+ * =========================
+ */
+
+.color-black {
+	color: $black;
+}
+
+.color-white {
+	color: $white;
+}
+
+.color-grey {
+	color: $grey;
+}
+
+.color-light-grey {
+	color: $light-grey;
+}
+
+.color-primary {
+	color: $primary-color;
+}
+
+.color-secondary {
+	color: $secondary-color;
+}
+
+.color-tertiary {
+	color: $tertiary-color;
+}
+
+/**
+ * =========================
+ *    || Background colors
+ * =========================
+ */
+
+.background-black {
+	background-color: $black;
+}
+
+.background-white {
+	background-color: $white;
+}
+
+.background-grey {
+	background-color: $grey;
+}
+
+.background-light-grey {
+	background-color: $light-grey;
+}
+
+.background-primary {
+	background-color: $primary-color;
+}
+
+.background-secondary {
+	background-color: $secondary-color;
+}
+
+.background-tertiary {
+	background-color: $tertiary-color;
+}

@@ -58,16 +58,10 @@ button, input[type="button"], input[type="submit"], input[type="reset"] {
 	background-color: $primary-color;
 	color: $white;
 	cursor: pointer;
-	&:hover {
-		background-color: $secondary-color;
-	}
 }
 
 button[disabled],
 input[disabled]  {
 	opacity: .5;
 	cursor: not-allowed;
-	&:hover{
-		background-color: $primary-color;
-	}
 }

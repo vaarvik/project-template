@@ -1,0 +1,79 @@
+/**
+ *
+ * ██████╗  ██████╗ ██████╗ ██████╗ ███████╗██████╗ ███████╗
+ * ██╔══██╗██╔═══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗██╔════╝
+ * ██████╔╝██║   ██║██████╔╝██║  ██║█████╗  ██████╔╝███████╗
+ * ██╔══██╗██║   ██║██╔══██╗██║  ██║██╔══╝  ██╔══██╗╚════██║
+ * ██████╔╝╚██████╔╝██║  ██║██████╔╝███████╗██║  ██║███████║
+ * ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝╚══════╝
+ *
+ *
+ * This sheet contains:
+ * * Utilities for borders
+ *
+ * This sheet is a part of the Utilities folder which is not really a part of SMACSS:
+ * General classes/helpers that can be used to extend other classes. Often general styles that can be applied wherever.
+ */
+
+.no-border {
+	border: 0;
+}
+
+//The biggest border-width (in px) that will be created
+$max-border-size: 3;
+
+//The smallest border-width (in px) that will be created
+$min-border-size: 1;
+
+/**
+ * Create borders
+ * ----------
+ * Creates border classes for the all sides or a specific side.
+ *
+ * @param	$type			string		The type of border (solid, dashed, etc).
+ * @param	$color-name		string		The preferred name of the color.
+ * @param	$color			string		The color of the border.
+ * @param	$side?			string		The side that the border should accur on (left, right, top, bottom).
+ */
+@mixin create-borders( $type, $color-name, $color, $side: "" ) {
+	@for $i from $min-border-size to $max-border-size + 1 {
+		@if $side == "" {
+			.border-#{$type}-#{$color-name}-#{$i}{
+				border: #{$i}px $type $color;
+			}
+		}
+		@else {
+			.border-#{$side}-#{$type}-#{$color-name}-#{$i}{
+				border-#{$side}: #{$i}px $type $color;
+			}
+		}
+	}
+}
+
+/**
+ * Include borders
+ * ----------
+ * Creates border classes using the create-border mixin.
+ *
+ * @param	$color-name		string		The preferred name of the color.
+ * @param	$color			string		The color of the border.
+ * @param	$color-name		array		The types of borders. "..." is the same as "args" in javascript.
+ */
+@mixin include-borders( $color-name, $color, $types... ) {
+	$sides: left, right, top, bottom;
+	@each $type in $types {
+		@include create-borders( $type, $color-name, $color );
+		@each $side in $sides {
+			@include create-borders( $type, $color-name, $color, $side );
+		}
+	}
+}
+
+//Include these borders in the stylesheet:
+@include include-borders( black, $black, solid );
+@include include-borders( white, $white, solid );
+@include include-borders( grey, $grey, solid );
+@include include-borders( light-grey, $light-grey, solid );
+@include include-borders( primary, $primary-color, solid );
+@include include-borders( secondary, $secondary-color, solid );
+@include include-borders( tertiary, $tertiary-color, solid );

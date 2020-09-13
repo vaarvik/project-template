@@ -21,25 +21,20 @@
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 	border-radius: 5em;
 	text-transform: uppercase;
-	border: 3px solid $primary-color;
-	transition: .4s ease;
+	transition: .15s ease;
+	@extend .border-solid-primary-3;
 
 	//Modifiers
 	&--primary {
 		&:hover {
-			background-color: $white;
-			color: $primary-color;
-			border: 3px solid $primary-color;
+			@extend .background-white, .color-primary;
 		}
 	}
 	&--secondary {
-		background-color: $white;
-		color: $primary-color;
-		border: 3px solid $primary-color;
+		@extend .background-white, .color-primary;
 		&:hover {
-			background-color: $primary-color;
-			color: $white;
 			border: 3px solid transparent;
+			@extend .background-primary, .color-white;
 		}
 	}
 }

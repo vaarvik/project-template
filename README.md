@@ -140,13 +140,17 @@ The naming convention is based on [BEM](http://getbem.com/naming/). Here's an ex
 #### Utilities
 Utilities are messy and unnecessary inside a HTML document. If for example the number of colums is for the entire site is set by a utility, then you'd have to go over the entire HTML and change the selector all over the place. However, if efficiency is important you could do this, but then you should make a note that you have a technical debt that should be cleaned up if the projects goes further. Under some circumstances this might make sense if you don't know what the logic class name for a component would be.
 
-In most cases you should use utilities as a extend of a class. This comes in during the styling after you've given your component a logical class name. Doing this will decrease the size of your CSS file and make the style easy to maintain, because you might just have to change the selector more once in the example above. Here's an example using extend:
+In most cases you should use utilities as a extend of a class. This comes in during the styling after you've given your component a logical class name. Doing this will decrease the size of your CSS file and make the style easy to maintain, because you might just have to change the selector more once in the example above.
+
+Utilities should not be used as extends for styles that come earlier than the utilities themselves in the stylesheet. In this project utilities is below base and global styles which means it should not be used as extends in those categories.
+
+Here's an example using extend:
 ```scss
 .block {
 	display: inline-block;
 	width: 200px;
 	min-height: 200px;
-	@extend .mgn-m; //mgn-m is a utility with a "medium"-sized margin.
+	@extend .margin-m; //margin-m is a utility with a "medium"-sized margin.
 }
 ```
 #### IDs

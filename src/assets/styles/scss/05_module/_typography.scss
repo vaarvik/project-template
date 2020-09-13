@@ -54,17 +54,14 @@
 
 .quote {
 	font-size: $mb-font-size;
-	color: $white;
-	margin: 0;
-	padding: $vb-spacing;
-	background-color: $primary-color;
+	@extend .background-primary, .color-white, .padding-vs, .no-margin;
 	&:before {
 		content: "\"";
 		font-size: calc( #{$b-font-size} * 5 );
 		float: right;
 		vertical-align: text-top;
-		position: relative;
 		margin-top: calc( #{$b-font-size} * -1 );
+		@extend .position-relative;
 	}
 
 	//Elements
@@ -74,9 +71,6 @@
 }
 
 .infobox {
-	background-color: $primary-color;
-	padding: $s-spacing;
-	color: $white;
-	margin: $s-spacing;
 	max-width: 250px;
+	@extend .background-primary, .color-white, .padding-s, .margin-s;
 }

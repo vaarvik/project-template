@@ -26,17 +26,16 @@
 .spreadsheet {
 	border-collapse: collapse; //Removes spacing in table
 	border-style: hidden; //Remove all the outside borders of the existing table
-	margin: $s-spacing auto;
+	@extend .margin-s-auto;
 
 	//Elements
 	&__cell { //td
-		padding: $vs-spacing;
-		border: 2px solid $secondary-color;
+		@extend .padding-vs, .border-solid-secondary-2;
 
 		//Element modifiers
 		&--header { //th
-			border: 3px solid $secondary-color;
 			text-align: inherit;
+			@extend .border-solid-secondary-3;
 		}
 	}
 

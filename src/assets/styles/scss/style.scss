@@ -93,8 +93,10 @@ Finally, Theme rules are similar to state rules in that they describe how module
  * =========================
  */
 
+@import '03_utility/colors.scss';
 @import '03_utility/spacing.scss';
 @import '03_utility/positioning.scss';
+@import '03_utility/borders.scss';
 
 /**
  * =========================

@@ -20,22 +20,20 @@
 .field {
 	box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
 	border-radius: 5px;
-	background-color: $light-grey;
-	border: 0;
 	display: block;
+	@extend .background-light-grey, .no-border;
 
 	//Modifiers
 	&--input{
-		padding: $ms-spacing;
+		@extend .padding-ms;
 	}
 
 	//Elements
 	&__option {
-		padding: $s-spacing;
-		border-bottom: 2px solid $grey;
+		@extend .padding-s, .border-bottom-solid-grey-2;
 		&:hover {
-			background-color: $white;
 			cursor: pointer;
+			@extend .background-white;
 		}
 	}
 }

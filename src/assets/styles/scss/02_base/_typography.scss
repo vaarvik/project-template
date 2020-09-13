@@ -23,7 +23,7 @@
  * =========================
  */
 
- body {
+body {
 	font-family: $primary-font;
 	font-size: $base-font-size;
 	color: $black;
@@ -79,10 +79,8 @@ p {
 
 a {
 	color: $secondary-color;
-	text-decoration: none;
-	&:hover {
-		text-decoration: underline;
-	}
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 small, sub, sup {
