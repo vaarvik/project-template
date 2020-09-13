@@ -35,7 +35,6 @@
 
 		//Element modifiers
 		&--header { //th
-			@extend .spreadsheet__cell;
 			border: 3px solid $secondary-color;
 			text-align: inherit;
 		}

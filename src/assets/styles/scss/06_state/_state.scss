@@ -26,3 +26,36 @@
 a.is-active {
 
 }
+
+.card {
+	display: inline-block;
+	width: 200px;
+	min-height: 200px;
+	margin: 20px;
+	background-color: lightgrey;
+	color: black;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+	&--scary {
+		background-color: #181818;
+		color: white;
+		.card__heading {
+			color: crimson;
+		}
+	}
+	&__img {
+		display: block;
+		margin: 0 auto;
+		padding-top: 20px;
+		width: 80%;
+		&--full {
+			padding-top: 0;
+			width: 100%;
+		}
+	}
+	&__content {
+		padding: 20px;
+	}
+	&__heading {
+		color: seagreen;
+	}
+}

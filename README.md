@@ -42,59 +42,69 @@ The five (+2) categories are:
 6. State - Overrides all other styles by forcing a change in a components state.
 7. Theme - Whenever there should be an adjustment (as for example colors etc.) to a child theme. Not used unless there's actually several themes on the site.
 #### Naming
-The naming convention is based on BEM. Here's an example when creating the Module "block".
+The naming convention is based on [BEM](http://getbem.com/naming/). Here's an example when creating the Module "block".
 ![A screenshot of the block example](src/assets/images/project-template-screen.png?raw=true)
 ```html
-<div class="block">
-	<img class="block__img" src="https://picsum.photos/seed/picsum/200/300"/>
-	<div class="block__content">
-		<p>Lots of text</p>
+<div class="card">
+		<img class="card__img" src="https://picsum.photos/200/300"/>
+		<div class="card__content">
+			<h4 class="card__heading">Heading</h4>
+			<p>Lots of text</p>
+		</div>
 	</div>
-</div>
-<div class="block--transparent">
-	<img class="block__img" src="https://picsum.photos/seed/picsum/200/300"/>
-	<div class="block__content">
-		<p>Lots of text</p>
+	<div class="card card--scary">
+		<img class="card__img" src="https://picsum.photos/200/300"/>
+		<div class="card__content">
+			<h4 class="card__heading">Heading</h4>
+			<p>Lots of text</p>
+		</div>
 	</div>
-</div>
-<div class="block--transparent">
-	<img class="block__img--full" src="https://picsum.photos/seed/picsum/200/300"/>
-	<div class="block__content">
-		<p>Lots of text</p>
+	<div class="card card--scary">
+		<img class="card__img card__img--full" src="https://picsum.photos/200/300"/>
+		<div class="card__content">
+			<h4 class="card__heading">Heading</h4>
+			<p>Lots of text</p>
+		</div>
 	</div>
-</div>
 ```
 #### CSS example:
 ```css
-.block, .block--transparent {
+.card {
 	display: inline-block;
 	width: 200px;
 	min-height: 200px;
 	margin: 20px;
-	background-color: lightgrey;
+	background-color: #f8f8f8;
 	color: black;
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 }
-.block--transparent {
-	background-color: transparent;
+.card--scary {
+	background-color: #181818;
+	color: white;
 }
-.block__img, .block__img--full {
+.card__img {
 	display: block;
 	margin: 0 auto;
 	padding-top: 20px;
 	width: 80%;
 }
-.block__img--full {
+.card__img--full {
 	padding-top: 0;
 	width: 100%;
 }
-.block__content {
+.card__content {
 	padding: 20px;
+}
+.card__heading {
+	color: seagreen;
+}
+.card--scary .card__heading {
+	color: crimson;
 }
 ```
 #### SCSS example:
 ```scss
-.block {
+.card {
 	display: inline-block;
 	width: 200px;
 	min-height: 200px;
@@ -102,23 +112,28 @@ The naming convention is based on BEM. Here's an example when creating the Modul
 	background-color: lightgrey;
 	color: black;
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-	&--transparent {
-		@extend .block;
-		background-color: transparent;
+	&--scary {
+		background-color: #181818;
+		color: white;
+		.card__heading {
+			color: crimson;
+		}
 	}
 	&__img {
 		display: block;
 		margin: 0 auto;
 		padding-top: 20px;
 		width: 80%;
-		&--full{
-			@extend .block__img;
+		&--full {
 			padding-top: 0;
 			width: 100%;
 		}
 	}
 	&__content {
 		padding: 20px;
+	}
+	&__heading {
+		color: seagreen;
 	}
 }
 ```

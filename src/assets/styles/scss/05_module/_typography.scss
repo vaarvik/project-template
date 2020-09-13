@@ -23,28 +23,24 @@
  * =========================
  */
 
- .default-ul, .default-ol {
+ .text-list {
 	padding-inline-start: $b-spacing;
 
 	//Elements
-	&__li {
+	&__item {
 		list-style: inherit;
 
 		//Element Modifiers
 		&--disc{
-			@extend .default-ul__li;
 			list-style: disc;
 		}
 		&--square{
-			@extend .default-ul__li;
 			list-style: square;
 		}
 		&--roman{
-			@extend .default-ul__li;
 			list-style: upper-roman;
 		}
 		&--decimal{
-			@extend .default-ol__li;
 			list-style: decimal;
 		}
 	}
