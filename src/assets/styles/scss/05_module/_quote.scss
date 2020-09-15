@@ -1,0 +1,38 @@
+/**
+ *
+ *  ██████╗ ██╗   ██╗ ██████╗ ████████╗███████╗
+ * ██╔═══██╗██║   ██║██╔═══██╗╚══██╔══╝██╔════╝
+ * ██║   ██║██║   ██║██║   ██║   ██║   █████╗
+ * ██║▄▄ ██║██║   ██║██║   ██║   ██║   ██╔══╝
+ * ╚██████╔╝╚██████╔╝╚██████╔╝   ██║   ███████╗
+ *  ╚══▀▀═╝  ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝
+ *
+ *
+ * This sheet contains:
+ * * The quote module
+ * --------------------
+ * Used for quotes.
+ *
+ * This sheet is a part of the Module folder and follow the Module rules:
+ * A Module is a more discrete component of the page. Modules sit inside Layout components or other Module components.
+ * It is your navigation bars and your carousels and your dialogs and your widgets and so on. Each Module should be
+ * designed to exist as a standalone component.
+ */
+
+.quote {
+	font-size: $mb-font-size;
+	@extend .background-primary, .color-white, .padding-vs, .no-margin;
+	&:before {
+		content: "\"";
+		font-size: calc( #{$b-font-size} * 5 );
+		float: right;
+		vertical-align: text-top;
+		margin-top: calc( #{$b-font-size} * -1 );
+		@extend .position-relative;
+	}
+
+	//Elements
+	&__cite {
+		font-size: $m-font-size;
+	}
+}
