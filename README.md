@@ -41,6 +41,8 @@ The five (+2) categories are:
 5. Module - Reusable modules. The components that go inside the layouts.
 6. State - Overrides all other styles by forcing a change in a components state.
 7. Theme - Whenever there should be an adjustment (as for example colors etc.) to a child theme. Not used unless there's actually several themes on the site.
+
+The hardest ones to differentiate is Layout and Module. A good rule of thumb is that a layout component should have "the" in front of it (because it's singular), while a module should have "a/an" in front of it (because it's plural). For example "the header" (layout) and "a card" (module) with "a card__header" (module child/element).
 #### Naming
 The naming convention is based on [BEM](http://getbem.com/naming/). Here's an example when creating the Module "block".
 ![A screenshot of the block example](src/assets/images/project-template-screen.png?raw=true)
@@ -156,11 +158,14 @@ Here's an example using extend:
 #### IDs
 IDs should not be used for styling, but should be added in HTML for JavaScript purposes. Here's a list with IDs that should be included as a standard:
 * #wrapper
-* #site-footer
-* #site-sidebar
-* #site-content
-* #site-navigation
 * #site-header
+* #site-navigation
+* #site-branding
+* #site-logo
+* #site-description
+* #site-content
+* #site-sidebar
+* #site-footer
 ### JavaScript
 The different scripts is concatenated into two minimized files by default: vendors.min.js and customs.min.js. This happens because Gulp goes throught the folders named "customs" and "vendors" and merge the underlying files into one single file.
 

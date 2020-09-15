@@ -65,7 +65,7 @@ Finally, Theme rules are similar to state rules in that they describe how module
 
 /**
  * =========================
- *    || GLOBAL VARIABLES
+ *    || Global
  * =========================
  */
 
@@ -76,7 +76,7 @@ Finally, Theme rules are similar to state rules in that they describe how module
 
 /**
  * =========================
- *    || BASE
+ *    || Base
  * =========================
  */
 
@@ -106,7 +106,7 @@ Finally, Theme rules are similar to state rules in that they describe how module
 
 @import '04_layout/sites.scss';
 @import '04_layout/site.scss';
-@import '04_layout/entry-modules.scss';
+@import '04_layout/entry.scss';
 
 /**
  * =========================

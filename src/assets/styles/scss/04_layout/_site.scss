@@ -1,3 +1,4 @@
+
 /**
  *
  * ███████╗██╗████████╗███████╗
@@ -9,16 +10,11 @@
  *
  *
  * This sheet contains:
- * * Layouts that's used on every page
- *
- * Types:
- * ----------
- * * .site-header wraps the header for the site
- * * .site-branding wraps the branding for the site (.site-title and .site-description for example)
- * * .site-title wraps the title for the site
- * * .site-title wraps the logo for the site
- * * .site-description wraps the description/slogan for the site
- * * .site-content wraps the content for the site
+ * * The site layout header
+ * * The site layout content
+ * * The site layout footer
+ * --------------------
+ * The site components wraps the main sections of the entire site.
  *
  * This sheet is a part of the Layout folder and follow the Layout rules:
  * The major components are referred to as Layout styles. The minor (Module) components—such as a callout, or login form,
@@ -26,29 +22,7 @@
  * Generally, a Layout style only has a single selector: a single ID or class name.
  */
 
-/**
- * =========================
- *    || Classes
- * =========================
- */
-
 .site-header {
-
-}
-
-.site-branding {
-
-}
-
-.site-title {
-
-}
-
-.site-logo {
-
-}
-
-.site-description {
 
 }
 
