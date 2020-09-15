@@ -44,7 +44,7 @@ The five (+2) categories are:
 
 The hardest ones to differentiate is Layout and Module. A good rule of thumb is that a layout component should have "the" in front of it (because it's singular), while a module should have "a/an" in front of it (because it's plural). For example "the header" (layout) and "a card" (module) with "a card__header" (module child/element).
 #### Naming
-The naming convention is based on [BEM](http://getbem.com/naming/). Here's an example when creating the Module "block".
+The naming convention is based on [BEM](http://getbem.com/naming/). Here's an example when creating the Module "card".
 ![A screenshot of the block example](src/assets/images/project-template-screen.png?raw=true)
 ```html
 <div class="card">
