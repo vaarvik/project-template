@@ -1,0 +1,65 @@
+/**
+ *
+ * ███╗   ███╗███████╗██████╗ ██╗ █████╗     ███╗   ███╗██╗██╗  ██╗██╗███╗   ██╗███████╗
+ * ████╗ ████║██╔════╝██╔══██╗██║██╔══██╗    ████╗ ████║██║╚██╗██╔╝██║████╗  ██║██╔════╝
+ * ██╔████╔██║█████╗  ██║  ██║██║███████║    ██╔████╔██║██║ ╚███╔╝ ██║██╔██╗ ██║███████╗
+ * ██║╚██╔╝██║██╔══╝  ██║  ██║██║██╔══██║    ██║╚██╔╝██║██║ ██╔██╗ ██║██║╚██╗██║╚════██║
+ * ██║ ╚═╝ ██║███████╗██████╔╝██║██║  ██║    ██║ ╚═╝ ██║██║██╔╝ ██╗██║██║ ╚████║███████║
+ * ╚═╝     ╚═╝╚══════╝╚═════╝ ╚═╝╚═╝  ╚═╝    ╚═╝     ╚═╝╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝
+ *
+ *
+ * This sheet contains:
+ * * Mediaqueries for different media.
+ *
+ * This sheet is a part of the Utilities folder which is not really a part of SMACSS:
+ * General classes/helpers that can be used to extend other classes. Often general styles that can be applied wherever.
+ */
+
+/**
+ * =========================
+ *    || Tablets (landscape)
+ * =========================
+ * Tablets in landscape mode and less
+ */
+@mixin tablet-landscape() {
+	@media only screen and (max-width: 1365px) {
+		@content;
+	}
+}
+
+/**
+ * =========================
+ *    || Tablets (portrait )
+ * =========================
+ * Tablets in portrait mode and less, large display smartphones landscape mode and less
+ */
+
+@mixin tablet-portrait() {
+	@media only screen and (max-width: 1023px) {
+		@content;
+	}
+}
+
+/**
+ * =========================
+ *    || Phones (landscape)
+ * =========================
+ * Smartphones in landscape mode and less
+ */
+@mixin phone-landscape() {
+	@media only screen and (max-width: 767px) {
+		@content;
+	}
+}
+
+/**
+ * =========================
+ *    || Phones (portrait)
+ * =========================
+ * Smartphones in portrait mode and less
+ */
+@mixin phone-portrait() {
+	@media only screen and (max-width: 420px) {
+		@content;
+	}
+}

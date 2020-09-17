@@ -22,5 +22,9 @@
 
 .infobox {
 	max-width: 250px;
-	@extend .background-primary, .color-white, .padding-s, .margin-s;
+	@extend .background-primary, .color-white, .padding-s;
+	@include phone-portrait() {
+		width: 100%;
+		max-width: 100%;
+	}
 }

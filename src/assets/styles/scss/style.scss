@@ -73,7 +73,6 @@ Finally, Theme rules are similar to state rules in that they describe how module
 @import '01_global/sizes.scss';
 @import '01_global/text.scss';
 
-
 /**
  * =========================
  *    || Base
@@ -93,6 +92,7 @@ Finally, Theme rules are similar to state rules in that they describe how module
  * =========================
  */
 
+@import '03_utility/media-mixins.scss';
 @import '03_utility/colors.scss';
 @import '03_utility/spacing.scss';
 @import '03_utility/positioning.scss';
@@ -118,8 +118,8 @@ Finally, Theme rules are similar to state rules in that they describe how module
 @import '05_module/field.scss';
 @import '05_module/text-list.scss';
 @import '05_module/spreadsheet.scss';
-@import '05_module/quote.scss';
 @import '05_module/infobox.scss';
+@import '05_module/quote.scss';
 
  /**
  * =========================
@@ -128,8 +128,6 @@ Finally, Theme rules are similar to state rules in that they describe how module
  */
 
 @import '06_state/state.scss';
-@import '06_state/media-tablet.scss';
-@import '06_state/media-phone.scss';
 
 /**
  * =========================
