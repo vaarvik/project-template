@@ -44,7 +44,7 @@ The five (+2) categories are:
 
 The hardest ones to differentiate is Layout and Module. A good rule of thumb is that a layout component should have "the" in front of it (because it's singular), while a module should have "a/an" in front of it (because it's plural). For example "the header" (layout) and "a card" (module) with "a card__header" (module child/element).
 #### Naming
-The naming convention is based on [BEM](http://getbem.com/naming/). Here's an example when creating the Module "card".
+The naming convention is inspired of [BEM](http://getbem.com/naming/). What makes the naming convention different from BEM is the way it handles its modifiers. In order to make it flexible it's also a recommended to limit the amound of nesting when using SASS. Here's an example when creating the Module "card".
 ![A screenshot of the block example](src/assets/images/project-template-screen.png?raw=true)
 ```html
 <div class="card">
@@ -80,7 +80,7 @@ The naming convention is based on [BEM](http://getbem.com/naming/). Here's an ex
 	color: black;
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 }
-.card--scary {
+.card.scary {
 	background-color: #181818;
 	color: white;
 }
@@ -90,7 +90,10 @@ The naming convention is based on [BEM](http://getbem.com/naming/). Here's an ex
 	padding-top: 20px;
 	width: 80%;
 }
-.card__img--full {
+.card__img:hover ~ .card__content {
+	opacity: .6;
+}
+.card__img.full {
 	padding-top: 0;
 	width: 100%;
 }
@@ -100,7 +103,7 @@ The naming convention is based on [BEM](http://getbem.com/naming/). Here's an ex
 .card__heading {
 	color: seagreen;
 }
-.card--scary .card__heading {
+.card.scary .card__heading {
 	color: crimson;
 }
 ```
@@ -114,30 +117,34 @@ The naming convention is based on [BEM](http://getbem.com/naming/). Here's an ex
 	background-color: lightgrey;
 	color: black;
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-	&--scary {
+	&.scary {
 		background-color: #181818;
 		color: white;
 		.card__heading {
 			color: crimson;
 		}
 	}
-	&__img {
-		display: block;
-		margin: 0 auto;
-		padding-top: 20px;
-		width: 80%;
-		&--full {
-			padding-top: 0;
-			width: 100%;
-		}
+}
+.card__img {
+	display: block;
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 80%;
+	&.full {
+		padding-top: 0;
+		width: 100%;
 	}
-	&__content {
-		padding: 20px;
-	}
-	&__heading {
-		color: seagreen;
+	&:hover ~ .card__content{
+		opacity: .6;
 	}
 }
+.card__content {
+	padding: 20px;
+}
+.card__heading {
+	color: seagreen;
+}
+
 ```
 #### Utilities
 Utilities are messy and unnecessary inside a HTML document. If for example the number of colums is for the entire site is set by a utility, then you'd have to go over the entire HTML and change the selector all over the place. However, if efficiency is important you could do this, but then you should make a note that you have a technical debt that should be cleaned up if the projects goes further. Under some circumstances this might make sense if you don't know what the logic class name for a component would be.

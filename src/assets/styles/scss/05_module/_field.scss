@@ -26,16 +26,16 @@
 	@extend .background-light-grey, .no-border;
 
 	//Modifiers
-	&--input{
+	&.input {
 		@extend .padding-ms;
 	}
+}
 
-	//Elements
-	&__option {
-		@extend .padding-s, .border-bottom-solid-grey-2;
-		&:hover {
-			cursor: pointer;
-			@extend .background-white;
-		}
+//Elements
+.field__option {
+	@extend .padding-s, .border-bottom-solid-grey-2;
+	&:hover {
+		cursor: pointer;
+		@extend .background-white;
 	}
 }

@@ -19,25 +19,25 @@
  * designed to exist as a standalone component.
  */
 
- .text-list {
+.text-list {
 	padding-inline-start: $b-spacing;
 
-	//Elements
-	&__item {
-		list-style: inherit;
-
-		//Element Modifiers
-		&--disc{
-			list-style: disc;
-		}
-		&--square{
-			list-style: square;
-		}
-		&--roman{
-			list-style: upper-roman;
-		}
-		&--decimal{
-			list-style: decimal;
-		}
+	//Modifiers
+	&.disc{
+		list-style: disc;
 	}
+	&.square{
+		list-style: square;
+	}
+	&.roman{
+		list-style: upper-roman;
+	}
+	&.decimal{
+		list-style: decimal;
+	}
+}
+
+//Elements
+.text-list__item {
+	list-style: inherit;
 }

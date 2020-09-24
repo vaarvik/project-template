@@ -30,9 +30,9 @@
 		margin-top: calc( #{$b-font-size} * -1 );
 		@extend .position-relative;
 	}
+}
 
-	//Elements
-	&__cite {
-		font-size: $m-font-size;
-	}
+//Elements
+.quote__cite {
+	font-size: $m-font-size;
 }

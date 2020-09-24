@@ -25,12 +25,12 @@
 	@extend .border-solid-primary-3;
 
 	//Modifiers
-	&--primary {
+	&.primary {
 		&:hover {
 			@extend .background-white, .color-primary;
 		}
 	}
-	&--secondary {
+	&.secondary {
 		@extend .background-white, .color-primary;
 		&:hover {
 			border: 3px solid transparent;

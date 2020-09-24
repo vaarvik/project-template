@@ -21,18 +21,17 @@
 
 .spreadsheet {
 	border-collapse: collapse; //Removes spacing in table
-	border-style: hidden; //Remove all the outside borders of the existing table
+	border-style: hidden; //Removes all the outside borders of the existing table
 	@extend .margin-s-auto;
+}
 
-	//Elements
-	&__cell { //td
-		@extend .padding-vs, .border-solid-secondary-2;
+//Elements
+.spreadsheet__cell { //td
+	@extend .padding-vs, .border-solid-secondary-2;
 
-		//Element modifiers
-		&--header { //th
-			text-align: inherit;
-			@extend .border-solid-secondary-3;
-		}
+	//Element modifiers
+	&.header { //th
+		text-align: inherit;
+		@extend .border-solid-secondary-3;
 	}
-
 }
