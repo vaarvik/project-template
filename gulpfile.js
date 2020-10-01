@@ -20,6 +20,7 @@
 */
 
 const gulp = require('gulp');
+const babel = require('gulp-babel');
 const terser = require('gulp-terser');
 const rename = require('gulp-rename');
 const concat = require('gulp-concat');
@@ -39,6 +40,10 @@ gulp.task( "scripts", function( done ) {
     gulp.src(`${assetsUri}/js/customs/*.js`)
         //make all into one single min-file
         .pipe(concat('customs.js'))
+        //babelize scripts
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
         //minimize scripts
 		.pipe(terser())
         //add .min to the file name
@@ -55,6 +60,10 @@ gulp.task( "scripts", function( done ) {
         //set the location for where the file should be stored
 		.pipe(gulp.dest(`${assetsUri}/js`));
     gulp.src(`${assetsUri}/js/specifics/*.js`)
+        //babelize scripts
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
         //minimize scripts
 		.pipe(terser())
         //add .min to the file name
