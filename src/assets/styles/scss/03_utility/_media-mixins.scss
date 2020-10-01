@@ -21,7 +21,7 @@
  * =========================
  * Tablets in landscape mode and less
  */
-@mixin tablet-landscape() {
+@mixin tablet-landscape {
 	@media only screen and (max-width: 1365px) {
 		@content;
 	}
@@ -34,7 +34,7 @@
  * Tablets in portrait mode and less, large display smartphones landscape mode and less
  */
 
-@mixin tablet-portrait() {
+@mixin tablet-portrait {
 	@media only screen and (max-width: 1023px) {
 		@content;
 	}
@@ -46,7 +46,7 @@
  * =========================
  * Smartphones in landscape mode and less
  */
-@mixin phone-landscape() {
+@mixin phone-landscape {
 	@media only screen and (max-width: 767px) {
 		@content;
 	}
@@ -58,7 +58,7 @@
  * =========================
  * Smartphones in portrait mode and less
  */
-@mixin phone-portrait() {
+@mixin phone-portrait {
 	@media only screen and (max-width: 420px) {
 		@content;
 	}
