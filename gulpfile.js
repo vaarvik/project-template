@@ -125,9 +125,9 @@ gulp.task( "watch", function( done ) {
         //all scss files in styles assets folder
         `${assetsUri}/styles/**/*.scss`,
         //all html files from root
-        './*.html',
+        './*/*.html',
         //all php files from root
-        './*.php',
+        './*/*.php',
     ],
     gulp.series( fileHandling, "reload" ) );
 
