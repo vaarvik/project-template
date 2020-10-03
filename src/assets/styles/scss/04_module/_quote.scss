@@ -21,14 +21,17 @@
 
 .quote {
 	font-size: $mb-font-size;
-	@extend .background-primary, .color-white, .padding-vs, .no-margin;
+	background-color: $primary-color;
+	color: $white;
+	padding: $vs-spacing;
+	margin: 0;
 	&:before {
 		content: "\"";
 		font-size: calc( #{$b-font-size} * 5 );
 		float: right;
 		vertical-align: text-top;
 		margin-top: calc( #{$b-font-size} * -1 );
-		@extend .position-relative;
+		position: relative;
 	}
 }
 

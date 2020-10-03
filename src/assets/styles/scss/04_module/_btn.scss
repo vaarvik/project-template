@@ -22,19 +22,22 @@
 	border-radius: 5em;
 	text-transform: uppercase;
 	transition: .15s ease;
-	@extend .border-solid-primary-3;
+	border: 3px solid $primary-color;
 
 	//Modifiers
 	&.primary {
 		&:hover {
-			@extend .background-white, .color-primary;
+			background-color: $white;
+			color: $primary-color;
 		}
 	}
 	&.secondary {
-		@extend .background-white, .color-primary;
+		background-color: $white;
+		color: $primary-color;
 		&:hover {
 			border: 3px solid transparent;
-			@extend .background-primary, .color-white;
+			background-color: $primary-color;
+			color: $white;
 		}
 	}
 }

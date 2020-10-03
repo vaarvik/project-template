@@ -23,19 +23,21 @@
 	box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
 	border-radius: 5px;
 	display: block;
-	@extend .background-light-grey, .no-border;
+	background-color: $light-grey;
+	border: 0;
 
 	//Modifiers
 	&.input {
-		@extend .padding-ms;
+		padding: $ms-spacing;
 	}
 }
 
 //Elements
 .field__option {
-	@extend .padding-s, .border-bottom-solid-grey-2;
+	padding: $s-spacing;
+	border-bottom: 2px solid $grey;
 	&:hover {
+		background-color: $white;
 		cursor: pointer;
-		@extend .background-white;
 	}
 }

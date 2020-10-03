@@ -22,8 +22,11 @@
 
 .infobox {
 	max-width: 250px;
-	@extend .background-primary, .color-white, .padding-s;
+	background-color: $primary-color;
+	color: $white;
+	padding: $s-spacing;
 	@include phone-portrait() {
+		background-color: $white;
 		width: 100%;
 		max-width: 100%;
 	}

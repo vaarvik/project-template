@@ -26,13 +26,44 @@ const rename = require('gulp-rename');
 const concat = require('gulp-concat');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
-var gcmq = require('gulp-group-css-media-queries');
+const gcmq = require('gulp-group-css-media-queries');
 const cleanCSS = require('gulp-clean-css');
+const purify = require('gulp-purifycss');
 const browserSync = require('browser-sync').create();
 const { config } = require('./gulp-config');
+const { readdirSync } = require('fs');
 
 //assets folder path
 const assetsUri = config.assetsUri.replace(/\/\s*$/, "");
+
+/**
+ * Get Directories
+ * ----------
+ * Excludes node_modules and .git from the directory files that is necessary to scan.
+ *
+ * @param   {String}  source 	The source to get directories from.
+ *
+ * @return  {Array}          	Directory names in the source.
+ */
+const getDirectories = (source) =>
+    readdirSync(source, { withFileTypes: true })
+    .filter(dirent => dirent.isDirectory() && dirent.name !== "node_modules" && dirent.name !== ".git")
+    .map(dirent => dirent.name);
+
+const dirs = getDirectories(__dirname);
+
+/**
+ * To (path)
+ * ----------
+ * Returns a path without that just focus on the folders that's not excluded in this directory.
+ *
+ * @param   {String}  path  The final path. $dir will be replaced with the folders that is not excluded.
+ *
+ * @return  {Array}         An array with the final paths.
+ */
+const to = (path) => {
+    return dirs.map((folder) => path.replace(/\$dir/g, folder));
+}
 
 //tasks for file handling
 let fileHandling = [ "scripts", "styles" ];
@@ -85,10 +116,24 @@ gulp.task('styles', function( done ) {
         .pipe(sass.sync().on('error', sass.logError))
         //group css media queries
         .pipe(gcmq())
-        //compress css
-        .pipe(cleanCSS({debug: true}))
         //prefix css
         .pipe(autoprefixer('last 2 versions'))
+        //remove unused css from the final css
+        //scan these files to see if css is used
+        .pipe(purify([
+            //all js files in js assets folder
+            `${assetsUri}/js/*/**/*.js`,
+            //all html files from root
+            ...to("./$dir/**/*.html"),
+            //all html files at root
+            './*.html',
+            //all php files from root
+            ...to("./$dir/**/*.php"),
+            //all php files at root
+            './*.php',
+        ]))
+        //compress css and mesh equal rules
+        .pipe(cleanCSS({ level: { 2: { restructureRules: true } } }))
         //set the location for where the file should be stored
         .pipe(gulp.dest(`${assetsUri}/styles`));
 
@@ -121,13 +166,17 @@ gulp.task('reload', function( done ) {
 gulp.task( "watch", function( done ) {
 	gulp.watch( [
         //all js files in js assets folder
-        `${assetsUri}/js/*/*.js`,
+        `${assetsUri}/js/*/**/*.js`,
         //all scss files in styles assets folder
         `${assetsUri}/styles/**/*.scss`,
         //all html files from root
-        './*/*.html',
+        ...to("./$dir/**/*.html"),
+        //all html files at root
+        './*.html',
         //all php files from root
-        './*/*.php',
+        ...to("./$dir/**/*.php"),
+        //all php files at root
+        './*.php',
     ],
     gulp.series( fileHandling, "reload" ) );
 
